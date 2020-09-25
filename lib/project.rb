@@ -19,6 +19,4 @@ class Project
     File.write("../#{@root_name}/spec/#{class_name}_spec.rb", "require ('rspec')\nrequire ('#{class_name}')\n\ndescribe('#{class_name.capitalize}') do\n\nend")
   end
 
-  
-
 end
