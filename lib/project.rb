@@ -11,6 +11,7 @@ class Project
 
   def make_root_files(script_response)
     File.write("../#{@root_name}/Gemfile", "source 'https://rubygems.org'\n\ngem 'rspec'\ngem 'pry'")
+    File.write("../#{@root_name}/README.md", "")
     script_response.downcase == 'y' ? File.write("../#{@root_name}/app.rb", "") : return
   end
 
