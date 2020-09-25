@@ -4,6 +4,10 @@ require ('./lib/project')
 # Create New Root Directory
 puts "Enter new root directory name"
 root_name = gets.chomp
+while (Dir.exists?("../#{root_name}")) do
+  puts "Error: Directory already exists. Please enter another name:"
+  root_name = gets.chomp
+end
 new_directory = Project.new(root_name)
 new_directory.make_directories
 
