@@ -9,4 +9,8 @@ class Project
     Dir.mkdir("../#{@root_name}/spec")
   end
 
+  def make_files
+    File.write("../#{@root_name}/Gemfile", "source 'https://rubygems.org'\ngem 'rspec'\ngem 'pry'")
+  end
+
 end
