@@ -21,7 +21,7 @@ puts "Would you like to add a class? (y/n)"
 class_response = gets.chomp
 while class_response.downcase == "y" do
   puts "Enter new CLASS name:"
-  class_name = gets.chomp
+  class_name = gets.chomp.downcase
   new_directory.make_files(class_name)
   puts "Would you like to add another class? (y/n)"
   class_response = gets.chomp
