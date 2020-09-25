@@ -1,4 +1,5 @@
 class Project
+  
   def initialize(name)
     @root_name = name
   end
